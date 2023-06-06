@@ -1,0 +1,13 @@
+def colorear_tablero(col, row):
+    if (col + row) % 2 == 0:
+        return "Blanco"
+    else:
+        return "Negro"
+
+def dibujar_tablero():
+    for row in range(1, 1001):
+        for col in range(1, 1001):
+            color = colorear_tablero(col, row)
+            print(f"Celda ({col},{row}): {color}")
+
+dibujar_tablero()
