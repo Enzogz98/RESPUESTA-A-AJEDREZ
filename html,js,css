@@ -1,0 +1,44 @@
+<html>
+<head>
+  <style>
+    .tablero {
+      display: grid;
+      grid-template-columns: repeat(1000, 1fr);
+    }
+
+    .celda {
+      width: 1px;
+      height: 1px;
+    }
+
+    .blanco {
+      background-color: white;
+    }
+
+    .negro {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="tablero">
+    <script>
+      for (let row = 0; row < 1000; row++) {
+        for (let col = 0; col < 1000; col++) {
+          const celda = document.createElement('div');
+          celda.classList.add('celda');
+          
+         
+          if ((row + col) % 2 === 0) {
+            celda.classList.add('blanco');
+          } else {
+            celda.classList.add('negro');
+          }
+          
+          document.body.appendChild(celda);
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>
